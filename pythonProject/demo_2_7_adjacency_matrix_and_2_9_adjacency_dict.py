@@ -32,6 +32,10 @@ class Graph(ABC):
     def get_edge_weight(self, v1, v2):
         pass
 
+    # @abstractmethod
+    def get_num_of_vertices(self):
+        return self.num_of_vertices
+
     @abstractmethod
     def display(self):
         pass
@@ -156,6 +160,9 @@ class Vertex:
         except KeyError:
             pass
         return weight
+
+    def __repr__(self):
+        return f"vertex id: {self.vertex_id}"
 
 
 class AdjacencyListGraph(Graph):
