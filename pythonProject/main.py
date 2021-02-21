@@ -2,6 +2,10 @@ from demo_2_7_adjacency_matrix_and_2_9_adjacency_dict import *
 from demo_2_12_depth_first import *
 
 
+def thing_test_print(node):
+    print(node)
+
+
 g = AdjacencyMatrixGraph(num_of_vertices=5, is_directed=True)
 g.add_edge(0, 4)
 g.add_edge(1, 3)
@@ -43,4 +47,6 @@ print("g2.get_indegree(1):", g2.get_in_degree(1))
 print("g2.get_indegree(2):", g2.get_in_degree(2))
 print("g2.get_indegree(3):", g2.get_in_degree(3))
 print("g2.get_indegree(4):", g2.get_in_degree(4))
+print("-"*50)
 action_breadth_first(g2, 1, thing_test_print)
+print("-"*50)
