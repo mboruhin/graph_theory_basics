@@ -1,6 +1,8 @@
 from demo_2_7_adjacency_matrix_and_2_9_adjacency_dict import *
+from demo_2_12_depth_first import *
 
-g = AdjacencyMatrixGraph(5, True)
+
+g = AdjacencyMatrixGraph(num_of_vertices=5, is_directed=True)
 g.add_edge(0, 4)
 g.add_edge(1, 3)
 g.add_edge(1, 0)
@@ -16,12 +18,14 @@ list4 = g.get_adjacent_vertices(4)
 print("list0:", list0)
 print("list1:", list1)
 print("list4:", list4)
-print("g.get_indegree(0):", g.get_in_degree(0))
-print("g.get_indegree(1):", g.get_in_degree(1))
-print("g.get_indegree(4):", g.get_in_degree(4))
+print("g.get_in_degree(0):", g.get_in_degree(0))
+print("g.get_in_degree(1):", g.get_in_degree(1))
+print("g.get_in_degree(4):", g.get_in_degree(4))
 
 print("g.get_edge_weight(4, 0):", g.get_edge_weight(4, 3))
 print("g.get_num_vertices:", g.get_num_of_vertices())
+print("-"*50)
+action_breadth_first(g, 1, thing_test_print)
 print("-"*50)
 # ################################### AdjacencySetGraph ############################################
 g2 = AdjacencyListGraph(5, True)
@@ -39,3 +43,4 @@ print("g2.get_indegree(1):", g2.get_in_degree(1))
 print("g2.get_indegree(2):", g2.get_in_degree(2))
 print("g2.get_indegree(3):", g2.get_in_degree(3))
 print("g2.get_indegree(4):", g2.get_in_degree(4))
+action_breadth_first(g2, 1, thing_test_print)
