@@ -22,6 +22,7 @@ class Graph(ABC):
 
     @abstractmethod
     def get_in_degree(self, vertex):
+        # bla
         pass
 
     # @abstractmethod
